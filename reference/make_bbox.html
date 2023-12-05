@@ -94,17 +94,17 @@ extended. if length 2 vector, applies to longitude and then latitude.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> -101.01740   27.01562  -90.43441   37.82839 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">lon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">crime</span><span class="op">$</span><span class="va">lon</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -95.50127 -95.50483 -95.36555 -95.38455 -95.40599 -95.51576 -95.22734</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] -95.56438 -95.39724 -95.43080</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -95.46524 -95.35534 -95.50411 -95.55594 -95.48433 -95.35664 -95.36054</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] -95.39490 -95.50872 -95.44891</span>
 <span class="r-in"><span><span class="op">(</span><span class="va">lat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">crime</span><span class="op">$</span><span class="va">lat</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 29.70533 29.78762 29.73246 29.70113 29.93485 29.81901 29.86017 29.67209</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 29.84397 29.85638</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 29.72978 29.76527 29.82829 29.74285 29.83320 29.59522 29.61902 29.73773</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 29.71451 29.77499</span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      left    bottom     right       top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -95.58123  29.65895 -95.21048  29.94799 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -95.56597  29.58332 -95.34531  29.84509 </span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, f <span class="op">=</span> <span class="fl">.10</span><span class="op">)</span> <span class="co"># bigger box</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      left    bottom     right       top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -95.59809  29.64582 -95.19363  29.96112 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -95.57600  29.57142 -95.33528  29.85699 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
