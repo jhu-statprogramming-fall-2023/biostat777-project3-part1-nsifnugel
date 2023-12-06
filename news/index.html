@@ -33,7 +33,13 @@
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
-      <ul class="navbar-nav"></ul></div>
+      <ul class="navbar-nav"><li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul></div>
 
     
   </div>
@@ -41,21 +47,21 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Changelog</h1>
-      
+      <small>Source: <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/blob/HEAD/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="4.0.0" id="ggmap-400">ggmap 4.0.0<a class="anchor" aria-label="anchor" href="#ggmap-400"></a></h2><p class="text-muted">CRAN release: 2023-11-19</p>
 <div class="section level3">
 <h3 id="new-features-4-0-0">New features<a class="anchor" aria-label="anchor" href="#new-features-4-0-0"></a></h3>
-<ul><li>Adds support for all styles from Stadia Maps via <code><a href="../reference/get_stadiamap.html">get_stadiamap()</a></code> (thanks @ianthetechie, #351).</li>
+<ul><li>Adds support for all styles from Stadia Maps via <code><a href="../reference/get_stadiamap.html">get_stadiamap()</a></code> (thanks <a href="https://github.com/ianthetechie" class="external-link">@ianthetechie</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/351" class="external-link">#351</a>).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="changes-4-0-0">Changes<a class="anchor" aria-label="anchor" href="#changes-4-0-0"></a></h3>
 <ul><li>Stamen map tiles are now hosted by Stadia Maps (see <a href="http://maps.stamen.com/stadia-partnership/" class="external-link uri">http://maps.stamen.com/stadia-partnership/</a>), which necessitates some breaking changes in ggmap. The existing URLs are expected to be shut off after October 31, 2023. This release renames the Stamen-related functions to Stadia equivalents (ex: <code><a href="../reference/get_stamenmap.html">get_stamenmap()</a></code> is now <code><a href="../reference/get_stadiamap.html">get_stadiamap()</a></code>). Developers will also need to make some minor changes to the style names to include a <code>stamen_</code> prefix and convert the names to <code>snake_case</code>. For example <code>toner-lite</code> becomes <code>stamen_toner_lite</code>.</li>
 <li>Removes the toner hybrid layer group, as well as some other deprecated styles which were not in wide use. Stamen’s Toner Hybrid can be recreated by layering the lines and labels on top of each other.</li>
 <li>Adds styles from Stadia Maps: Alidade Smooth (light and dark) and Outdoors.</li>
-<li>ggmap no longer depends on RgoogleMaps (thanks @sanjmeh, #354).</li>
+<li>ggmap no longer depends on RgoogleMaps (thanks <a href="https://github.com/sanjmeh" class="external-link">@sanjmeh</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/354" class="external-link">#354</a>).</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -75,20 +81,20 @@
 <div class="section level3">
 <h3 id="changes-3-0-1">Changes<a class="anchor" aria-label="anchor" href="#changes-3-0-1"></a></h3>
 <ul><li>
-<strong>ggmap</strong> no longer depends on <strong>rjson</strong> (thanks @MichaelChirico, #317).</li>
+<strong>ggmap</strong> no longer depends on <strong>rjson</strong> (thanks <a href="https://github.com/MichaelChirico" class="external-link">@MichaelChirico</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/317" class="external-link">#317</a>).</li>
 <li>Most functions now use <strong>cli</strong>-based messaging functions, following <strong>ggplot2</strong>’s lead.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="minor-improvements-and-fixes-3-0-1">Minor improvements and fixes<a class="anchor" aria-label="anchor" href="#minor-improvements-and-fixes-3-0-1"></a></h3>
-<ul><li><p><strong>ggmap</strong> functions can now be called even if it has not been attached to the search path (loaded) (reported by @jennybc, @lorenzwalthert, #264, #244).</p></li>
-<li><p>Google functions now properly encode #’s (reported by @aaronrudkin, #272).</p></li>
-<li><p><code><a href="../reference/get_stamenmap.html">get_stamenmap()</a></code> now only returns URLs if <code>messaging = TRUE</code> (Reported by @ikosmidis, #274). It also includes a more formal attribution to Stamen Design and OpenStreetMap.</p></li>
-<li><p><code><a href="../reference/get_stamenmap.html">get_stamenmap()</a></code> now supports a SSL Stamen endpoint via the <code>https</code> argument (#276).</p></li>
-<li><p><code><a href="../reference/mapdist.html">mapdist()</a></code> now properly orders results (reported by @BirgerNi, #266).</p></li>
+<ul><li><p><strong>ggmap</strong> functions can now be called even if it has not been attached to the search path (loaded) (reported by <a href="https://github.com/jennybc" class="external-link">@jennybc</a>, <a href="https://github.com/lorenzwalthert" class="external-link">@lorenzwalthert</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/264" class="external-link">#264</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/244" class="external-link">#244</a>).</p></li>
+<li><p>Google functions now properly encode #’s (reported by <a href="https://github.com/aaronrudkin" class="external-link">@aaronrudkin</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/272" class="external-link">#272</a>).</p></li>
+<li><p><code><a href="../reference/get_stamenmap.html">get_stamenmap()</a></code> now only returns URLs if <code>messaging = TRUE</code> (Reported by <a href="https://github.com/ikosmidis" class="external-link">@ikosmidis</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/274" class="external-link">#274</a>). It also includes a more formal attribution to Stamen Design and OpenStreetMap.</p></li>
+<li><p><code><a href="../reference/get_stamenmap.html">get_stamenmap()</a></code> now supports a SSL Stamen endpoint via the <code>https</code> argument (<a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/276" class="external-link">#276</a>).</p></li>
+<li><p><code><a href="../reference/mapdist.html">mapdist()</a></code> now properly orders results (reported by <a href="https://github.com/BirgerNi" class="external-link">@BirgerNi</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/266" class="external-link">#266</a>).</p></li>
 <li><p><code><a href="../reference/mapdist.html">mapdist()</a></code> now properly returns URLs if <code>urlonly = TRUE</code>.</p></li>
-<li><p><code><a href="../reference/get_map.html">get_map()</a></code> now (again) respects the <code>source = "google"</code> specification when given a bounding box (reported by @julovi, #267).</p></li>
-<li><p><code><a href="../reference/geocode.html">geocode()</a></code> now (again) respects the <code>source = "dsk"</code> specification (reported by @alistaire47, #180).</p></li>
-<li><p>A bug giving an error message <code>Error in aperm.default(map, c(2, 1, 3)) : invalid first argument, must be an array</code> has now been fixed. (solution by @kent37, #262).</p></li>
+<li><p><code><a href="../reference/get_map.html">get_map()</a></code> now (again) respects the <code>source = "google"</code> specification when given a bounding box (reported by <a href="https://github.com/julovi" class="external-link">@julovi</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/267" class="external-link">#267</a>).</p></li>
+<li><p><code><a href="../reference/geocode.html">geocode()</a></code> now (again) respects the <code>source = "dsk"</code> specification (reported by <a href="https://github.com/alistaire47" class="external-link">@alistaire47</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/180" class="external-link">#180</a>).</p></li>
+<li><p>A bug giving an error message <code>Error in aperm.default(map, c(2, 1, 3)) : invalid first argument, must be an array</code> has now been fixed. (solution by <a href="https://github.com/kent37" class="external-link">@kent37</a>, <a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel/issues/262" class="external-link">#262</a>).</p></li>
 <li><p><code><a href="../reference/geocode.html">geocode()</a></code> now properly caches when geocoding several locations. The caching keys are now the hash values of the scrubbed url.</p></li>
 </ul></div>
 </div>
