@@ -12,7 +12,9 @@
 <title>Spatial Visualization with ggplot2 • ggmap</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/Open_Sans-0.4.7/font.css" rel="stylesheet">
+<link href="deps/Courier_Prime-0.4.7/font.css" rel="stylesheet">
+<!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Spatial Visualization with ggplot2">
 <meta property="og:description" content="A collection of functions to visualize spatial data and models
@@ -28,7 +30,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="index.html">ggmap</a>
 
@@ -58,14 +60,7 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/dkahle/ggmap/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
+      <ul class="navbar-nav"></ul>
 </div>
 
     
@@ -79,23 +74,19 @@
 <div class="page-header"><h1 id="ggmap">ggmap<a class="anchor" aria-label="anchor" href="#ggmap"></a>
 </h1></div>
 <div class="section level2">
-<h2 id="important-information-before-getting-started">Important Information before Getting Started<a class="anchor" aria-label="anchor" href="#important-information-before-getting-started"></a>
+<h2 id="important-information">Important Information<a class="anchor" aria-label="anchor" href="#important-information"></a>
 </h2>
 <p>This website was created by Natalia Sifnugel for JHSPH Biostat777 Project 3.</p>
 <p>Link to Original GitHub Repository for Package: <a href="https://github.com/dkahle/ggmap" class="external-link uri">https://github.com/dkahle/ggmap</a></p>
 <p>Link to Deployed Website: <a href="https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-nsifnugel/index.html" class="uri">https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-nsifnugel/index.html</a></p>
 <p>Customized Website Elements:</p>
 <ul>
-<li>
+<li>Bootswatch Theme<br>
 </li>
-<li>
-</li>
-<li>
-</li>
-<li>
-</li>
-<li>
-</li>
+<li>Restructured Sidebar</li>
+<li>Restructured Footer</li>
+<li>Changed Fonts for Header, Base, and Code Text</li>
+<li>Customized Navbar Color</li>
 </ul>
 <p>Original Package Author(s)</p>
 <ul>
@@ -105,7 +96,7 @@
 <li>Mikko Korpela [ctb]</li>
 <li>Natalia Sifnugel [website]</li>
 </ul>
-<p>There are many functions included in this package, they can be found under the references tab of the site!</p>
+<p>There are many functions included in this package, they can be found under the reference tab of the site!</p>
 </div>
 <div class="section level2">
 <h2 id="goal">Goal<a class="anchor" aria-label="anchor" href="#goal"></a>
@@ -118,7 +109,7 @@
 <p>Stadia Maps offers map tiles in several styles, including updated <a href="https://stadiamaps.com/stamen/" class="external-link">tiles from Stamen Design</a>. An API key is required, but no credit card is necessary to <a href="https://client.stadiamaps.com/signup" class="external-link">sign up</a> and there is a free tier for non-commercial use. Once you have your API key, invoke the registration function: <code>register_stadiamaps("YOUR-API-KEY", write = FALSE)</code>. Note that setting <code>write = TRUE</code> will update your <code>~/.Renviron</code> file by replacing/adding the relevant line. If you use the former, know that you’ll need to re-do it every time you reset R.</p>
 <p>Your API key is <em>private</em> and unique to you, so be careful not to share it online, for example in a GitHub issue or saving it in a shared R script file. If you share it inadvertently, just go to client.stadiamaps.com, delete your API key, and create a new one.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/jhu-statprogramming-fall-2023/biostat777-project3-part1-nsifnugel" class="external-link">"ggmap"</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"ggmap"</span><span class="op">)</span></span>
 <span><span class="co">#  Loading required package: ggplot2</span></span>
 <span><span class="co">#  ℹ Google's Terms of Service: &lt;https://mapsplatform.google.com&gt;</span></span>
 <span><span class="co">#    Stadia Maps' Terms of Service: &lt;https://stadiamaps.com/terms-of-service/&gt;</span></span>
@@ -310,27 +301,11 @@
 </div>
 </div>
 
-  </main><aside class="col-md-3"><div class="links">
-<h2 data-toc-skip>Links</h2>
+  </main><aside class="col-md-3"><div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://cloud.r-project.org/package=ggmap" class="external-link">View on CRAN</a></li>
-<li><a href="https://github.com/dkahle/ggmap/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/dkahle/ggmap/issues" class="external-link">Report a bug</a></li>
-</ul>
-</div>
-
-<div class="license">
-<h2 data-toc-skip>License</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-2" class="external-link">GPL-2</a></li>
-</ul>
-</div>
-
-
-<div class="citation">
-<h2 data-toc-skip>Citation</h2>
-<ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing ggmap</a></li>
+<li><a href="https://cran.r-project.org/package=ggmap" class="external-link"><img src="https://www.r-pkg.org/badges/version/ggmap" alt="CRAN status"></a></li>
+<li><a href="https://ci.appveyor.com/project/dkahle/ggmap" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/github/dkahle/ggmap?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 </ul>
 </div>
 
@@ -344,11 +319,24 @@
 </ul>
 </div>
 
-<div class="dev-status">
-<h2 data-toc-skip>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=ggmap" class="external-link"><img src="https://www.r-pkg.org/badges/version/ggmap" alt="CRAN status"></a></li>
-<li><a href="https://ci.appveyor.com/project/dkahle/ggmap" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/github/dkahle/ggmap?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-2" class="external-link">GPL-2</a></li>
+</ul>
+</div>
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing ggmap</a></li>
+</ul>
+</div>
+
+<div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://cloud.r-project.org/package=ggmap" class="external-link">View on CRAN</a></li>
 </ul>
 </div>
 
@@ -358,7 +346,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by David Kahle, Hadley Wickham, Scott Jackson.</p>
+<p>Website Developed by Natalia Sifnugel</p>
 </div>
 
 <div class="pkgdown-footer-right">
