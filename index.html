@@ -12,8 +12,8 @@
 <title>Spatial Visualization with ggplot2 • ggmap</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/Open_Sans-0.4.7/font.css" rel="stylesheet">
-<link href="deps/Courier_Prime-0.4.7/font.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/Open_Sans-0.4.8/font.css" rel="stylesheet">
+<link href="deps/Courier_Prime-0.4.8/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Spatial Visualization with ggplot2">
@@ -126,7 +126,7 @@
 <span><span class="va">us</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>left <span class="op">=</span> <span class="op">-</span><span class="fl">125</span>, bottom <span class="op">=</span> <span class="fl">25.75</span>, right <span class="op">=</span> <span class="op">-</span><span class="fl">67</span>, top <span class="op">=</span> <span class="fl">49</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/get_stadiamap.html">get_stadiamap</a></span><span class="op">(</span><span class="va">us</span>, zoom <span class="op">=</span> <span class="fl">5</span>, maptype <span class="op">=</span> <span class="st">"alidade_smooth"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="reference/ggmap.html">ggmap</a></span><span class="op">(</span><span class="op">)</span> </span>
 <span><span class="co">#  ℹ © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</span></span></code></pre></div>
-<p><img src="tools/README-maptypes-1.png"></p>
+<p><img src="articles/tools/README-maptypes-1.png"></p>
 <p>Use <code><a href="reference/qmplot.html">qmplot()</a></code> in the same way you’d use <code><a href="https://ggplot2.tidyverse.org/reference/qplot.html" class="external-link">qplot()</a></code>, but with a map automatically added in the background:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://dplyr.tidyverse.org" class="external-link">"dplyr"</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
@@ -151,19 +151,19 @@
 <span><span class="fu"><a href="reference/qmplot.html">qmplot</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">violent_crimes</span>, maptype <span class="op">=</span> <span class="st">"stamen_toner_lite"</span>, color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#  ℹ Using `zoom = 14`</span></span>
 <span><span class="co">#  ℹ © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</span></span></code></pre></div>
-<p><img src="tools/README-qmplot-1.png"></p>
+<p><img src="articles/tools/README-qmplot-1.png"></p>
 <p>Often <code><a href="reference/qmplot.html">qmplot()</a></code> is easiest because it automatically computes a nice bounding box for you without having to pre-compute it for yourself, get a map, and then use <code>ggmap(map)</code> in place of where you would ordinarily (in a <strong>ggplot2</strong> formulation) use <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot()</a></code>. Nevertheless, doing it yourself is more efficient. In that workflow you get the map first (and you can visualize it with <code><a href="reference/ggmap.html">ggmap()</a></code>):</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bbox</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/make_bbox.html">make_bbox</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">violent_crimes</span><span class="op">)</span></span>
 <span><span class="va">map</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_stadiamap.html">get_stadiamap</a></span><span class="op">(</span> bbox <span class="op">=</span> <span class="va">bbox</span>, maptype <span class="op">=</span> <span class="st">"stamen_toner_lite"</span>, zoom <span class="op">=</span> <span class="fl">14</span> <span class="op">)</span></span>
 <span><span class="co">#  ℹ © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</span></span>
 <span><span class="fu"><a href="reference/ggmap.html">ggmap</a></span><span class="op">(</span><span class="va">map</span><span class="op">)</span></span></code></pre></div>
-<p><img src="tools/README-ggmap-1.png"></p>
+<p><img src="articles/tools/README-ggmap-1.png"></p>
 <p>And then you layer on geoms/stats as you would with <strong>ggplot2</strong>. The only difference is that (1) you need to specify the <code>data</code> arguments in the layers and (2) the spatial aesthetics <code>x</code> and <code>y</code> are set to <code>lon</code> and <code>lat</code>, respectively. (If they’re named something different in your dataset, just put <code>mapping = aes(x = longitude, y = latitude))</code>, for example.)</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ggmap.html">ggmap</a></span><span class="op">(</span><span class="va">map</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">violent_crimes</span>, color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="tools/README-ggmap-layers-1.png"></p>
+<p><img src="articles/tools/README-ggmap-layers-1.png"></p>
 <p>With <strong>ggmap</strong> you’re working with <strong>ggplot2</strong>, so you can add in other kinds of layers, use <a href="https://patchwork.data-imaginist.com" class="external-link"><strong>patchwork</strong></a>, etc. All the <strong>ggplot2</strong> geom’s are available. For example, you can make a contour plot with <code>geom = "density2d"</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://patchwork.data-imaginist.com" class="external-link">"patchwork"</a></span><span class="op">)</span></span>
@@ -188,7 +188,7 @@
 <span></span>
 <span><span class="op">(</span><span class="va">points_map</span> <span class="op">+</span> <span class="va">hdr_map</span><span class="op">)</span> <span class="op">&amp;</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>, axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>, axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="tools/README-ggmap-patchwork-1.png"></p>
+<p><img src="articles/tools/README-ggmap-patchwork-1.png"></p>
 <p>Faceting works, too:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ggmap.html">ggmap</a></span><span class="op">(</span><span class="va">map</span>, darken <span class="op">=</span> <span class="fl">.3</span><span class="op">)</span> <span class="op">+</span></span>
@@ -198,7 +198,7 @@
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="op">~</span> <span class="va">offense</span>, nrow <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>, axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>, axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="tools/README-faceting-1.png"></p>
+<p><img src="articles/tools/README-faceting-1.png"></p>
 </div>
 <div class="section level2">
 <h2 id="google-maps">Google Maps<a class="anchor" aria-label="anchor" href="#google-maps"></a>
@@ -210,7 +210,7 @@
 <span><span class="co">#  ℹ &lt;https://maps.googleapis.com/maps/api/geocode/json?address=waco+texas&amp;key=xxx&gt;</span></span>
 <span><span class="co">#  1280x1280 terrain map image from Google Maps; use `ggmap::ggmap()` to plot it.</span></span>
 <span><span class="fu"><a href="reference/ggmap.html">ggmap</a></span><span class="op">(</span><span class="va">map</span><span class="op">)</span></span></code></pre></div>
-<p><img src="tools/README-google_maps-1.png"></p>
+<p><img src="articles/tools/README-google_maps-1.png"></p>
 <p>Moreover, you can get various different styles of Google Maps with <strong>ggmap</strong> (just like Stadia Maps):</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/get_googlemap.html">get_googlemap</a></span><span class="op">(</span><span class="st">"waco texas"</span>, zoom <span class="op">=</span> <span class="fl">12</span>, maptype <span class="op">=</span> <span class="st">"satellite"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="reference/ggmap.html">ggmap</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -267,7 +267,7 @@
 <span><span class="co">#  This warning is displayed once every 8 hours.</span></span>
 <span><span class="co">#  Call `lifecycle::last_lifecycle_warnings()` to see where this warning was</span></span>
 <span><span class="co">#  generated.</span></span></code></pre></div>
-<p><img src="tools/README-route_trek-1.png"></p>
+<p><img src="articles/tools/README-route_trek-1.png"></p>
 <p>(They also provide information on how long it takes to get from point A to point B.)</p>
 <p>Map distances, in both length and anticipated time, can be computed with <code><a href="reference/mapdist.html">mapdist()</a></code>). Moreover the function is vectorized:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
