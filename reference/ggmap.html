@@ -295,6 +295,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># a shapefile like layer</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">zips</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>data set ‘zips’ not found</span>
 <span class="r-in"><span><span class="fu">ggmap</span><span class="op">(</span><span class="fu"><a href="get_map.html">get_map</a></span><span class="op">(</span>maptype <span class="op">=</span> <span class="st">"satellite"</span>, zoom <span class="op">=</span> <span class="fl">8</span><span class="op">)</span>, extent <span class="op">=</span> <span class="st">"device"</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_polygon.html" class="external-link">geom_polygon</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lon</span>, y <span class="op">=</span> <span class="va">lat</span>, group <span class="op">=</span> <span class="va">plotOrder</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    data <span class="op">=</span> <span class="va">zips</span>, colour <span class="op">=</span> <span class="cn">NA</span>, fill <span class="op">=</span> <span class="st">"red"</span>, alpha <span class="op">=</span> <span class="fl">.2</span><span class="op">)</span> <span class="op">+</span></span></span>
@@ -306,6 +307,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span><span class="va">zipsLabels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/plyr/man/ddply.html" class="external-link">ddply</a></span><span class="op">(</span><span class="va">zips</span>, <span class="fu"><a href="https://rdrr.io/pkg/plyr/man/quoted.html" class="external-link">.</a></span><span class="op">(</span><span class="va">zip</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span><span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="va">df</span><span class="op">[</span><span class="fl">1</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"area"</span>, <span class="st">"perimeter"</span>, <span class="st">"zip"</span>, <span class="st">"lonCent"</span>, <span class="st">"latCent"</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-in"><span><span class="op">}</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'zips' not found</span>
 <span class="r-in"><span><span class="fu">ggmap</span><span class="op">(</span><span class="fu"><a href="get_map.html">get_map</a></span><span class="op">(</span>maptype <span class="op">=</span> <span class="st">"satellite"</span>, zoom <span class="op">=</span> <span class="fl">9</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    extent <span class="op">=</span> <span class="st">"device"</span>, legend <span class="op">=</span> <span class="st">"none"</span>, darken <span class="op">=</span> <span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html" class="external-link">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lonCent</span>, y <span class="op">=</span> <span class="va">latCent</span>, label <span class="op">=</span> <span class="va">zip</span>, size <span class="op">=</span> <span class="va">area</span><span class="op">)</span>,</span></span>
@@ -316,9 +318,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span><span class="fu"><a href="qmplot.html">qmplot</a></span><span class="op">(</span><span class="va">lonCent</span>, <span class="va">latCent</span>, data <span class="op">=</span> <span class="va">zipsLabels</span>, geom <span class="op">=</span> <span class="st">"text"</span>,</span></span>
 <span class="r-in"><span>  label <span class="op">=</span> <span class="va">zip</span>, size <span class="op">=</span> <span class="va">area</span>, maptype <span class="op">=</span> <span class="st">"stamen_toner_lite"</span>, color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Using `zoom = 9`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get_stamen_url(maptype = maptype, zoom = zoom, x = row["x"],     y = row["y"]):</span> Stadia Maps requires an API key; see `ggmap::register_stadiamaps()`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'zipsLabels' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## crime data example</span></span></span>
@@ -330,6 +330,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span>  <span class="va">offense</span> <span class="op">!=</span> <span class="st">"theft"</span> <span class="op">&amp;</span></span></span>
 <span class="r-in"><span>  <span class="va">offense</span> <span class="op">!=</span> <span class="st">"burglary"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># rank violent crimes</span></span></span>
 <span class="r-in"><span><span class="va">violent_crimes</span><span class="op">$</span><span class="va">offense</span> <span class="op">&lt;-</span></span></span>
@@ -337,12 +338,14 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span>    levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"robbery"</span>, <span class="st">"aggravated assault"</span>,</span></span>
 <span class="r-in"><span>      <span class="st">"rape"</span>, <span class="st">"murder"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'violent_crimes' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># restrict to downtown</span></span></span>
 <span class="r-in"><span><span class="va">violent_crimes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">violent_crimes</span>,</span></span>
 <span class="r-in"><span>  <span class="op">-</span><span class="fl">95.39681</span> <span class="op">&lt;=</span> <span class="va">lon</span> <span class="op">&amp;</span> <span class="va">lon</span> <span class="op">&lt;=</span> <span class="op">-</span><span class="fl">95.34188</span> <span class="op">&amp;</span></span></span>
 <span class="r-in"><span>   <span class="fl">29.73631</span> <span class="op">&lt;=</span> <span class="va">lat</span> <span class="op">&amp;</span> <span class="va">lat</span> <span class="op">&lt;=</span>  <span class="fl">29.78400</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'violent_crimes' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># get map and bounding box</span></span></span>
@@ -376,9 +379,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span><span class="fu"><a href="qmplot.html">qmplot</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">violent_crimes</span>, maptype <span class="op">=</span> <span class="st">"stamen_toner_lite"</span>,</span></span>
 <span class="r-in"><span>  color <span class="op">=</span> <span class="va">offense</span>, size <span class="op">=</span> <span class="va">offense</span>, legend <span class="op">=</span> <span class="st">"topleft"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Using `zoom = 14`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get_stamen_url(maptype = maptype, zoom = zoom, x = row["x"],     y = row["y"]):</span> Stadia Maps requires an API key; see `ggmap::register_stadiamaps()`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'violent_crimes' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># or, with styling:</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="qmplot.html">qmplot</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">violent_crimes</span>, maptype <span class="op">=</span> <span class="st">"stamen_toner_lite"</span>,</span></span>
@@ -394,9 +395,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span>    legend.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"Offense"</span>, size <span class="op">=</span> <span class="st">"Offense"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Using `zoom = 14`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get_stamen_url(maptype = maptype, zoom = zoom, x = row["x"],     y = row["y"]):</span> Stadia Maps requires an API key; see `ggmap::register_stadiamaps()`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'violent_crimes' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
@@ -455,6 +454,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">overlay</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density_2d.html" class="external-link">stat_density2d</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lon</span>, y <span class="op">=</span> <span class="va">lat</span>, fill <span class="op">=</span> <span class="va">..level..</span>, alpha <span class="op">=</span> <span class="va">..level..</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    bins <span class="op">=</span> <span class="fl">4</span>, geom <span class="op">=</span> <span class="st">"polygon"</span>, data <span class="op">=</span> <span class="va">violent_crimes</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'violent_crimes' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">houston</span>,<span class="st">"bb"</span><span class="op">)</span> <span class="co"># to help finding (x/y)(min/max) vals below</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'houston' not found</span>
@@ -585,6 +585,7 @@ equivalent to <code>extent="normal"</code>. Overrides any <code>extent</code> ar
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">toupper</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/substr.html" class="external-link">substr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">violent_crimes</span><span class="op">$</span><span class="va">month</span><span class="op">)</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/substr.html" class="external-link">substr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">violent_crimes</span><span class="op">$</span><span class="va">month</span><span class="op">)</span>,<span class="fl">2</span>,<span class="fl">20</span><span class="op">)</span>, sep <span class="op">=</span> <span class="st">""</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'violent_crimes' not found</span>
 <span class="r-in"><span><span class="va">houston</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_map.html">get_map</a></span><span class="op">(</span>location <span class="op">=</span> <span class="st">"houston"</span>, zoom <span class="op">=</span> <span class="fl">14</span>, source <span class="op">=</span> <span class="st">"osm"</span>, color <span class="op">=</span> <span class="st">"bw"</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get_googlemap(center = location, zoom = zoom, filename = filename):</span> Google now requires an API key; see `ggmap::register_google()`.</span>
 <span class="r-in"><span><span class="va">HoustonMap</span> <span class="op">&lt;-</span> <span class="fu">ggmap</span><span class="op">(</span><span class="va">houston</span>,</span></span>

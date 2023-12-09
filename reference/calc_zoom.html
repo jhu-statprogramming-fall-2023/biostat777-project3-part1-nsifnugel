@@ -110,18 +110,21 @@ variables</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># From data</span></span></span>
 <span class="r-in"><span><span class="fu">calc_zoom</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, <span class="va">wind</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 7</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'wind' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From range</span></span></span>
 <span class="r-in"><span><span class="va">lon_range</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/extendrange.html" class="external-link">extendrange</a></span><span class="op">(</span> <span class="va">wind</span><span class="op">$</span><span class="va">lon</span> <span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'wind' not found</span>
 <span class="r-in"><span><span class="va">lat_range</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/extendrange.html" class="external-link">extendrange</a></span><span class="op">(</span> <span class="va">wind</span><span class="op">$</span><span class="va">lat</span> <span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'wind' not found</span>
 <span class="r-in"><span><span class="fu">calc_zoom</span><span class="op">(</span><span class="va">lon_range</span>, <span class="va">lat_range</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 7</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'lon_range' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From bounding box</span></span></span>
 <span class="r-in"><span><span class="va">box</span> <span class="op">&lt;-</span> <span class="fu"><a href="make_bbox.html">make_bbox</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">crime</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span><span class="fu">calc_zoom</span><span class="op">(</span><span class="va">box</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 7</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in calc_zoom(box):</span> if specifying a bounding box, the format should match that of make_bbox.</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

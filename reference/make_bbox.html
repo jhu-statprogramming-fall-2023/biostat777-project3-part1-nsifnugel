@@ -84,27 +84,20 @@ extended. if length 2 vector, applies to longitude and then latitude.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">crime</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      left    bottom     right       top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -99.88351  27.01562 -91.56830  37.82839 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">crime</span>, f <span class="op">=</span> <span class="fl">.20</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       left     bottom      right        top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -101.01740   25.54116  -90.43441   39.30286 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, data <span class="op">=</span> <span class="va">crime</span>, f <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.20</span>, <span class="fl">.05</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       left     bottom      right        top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -101.01740   27.01562  -90.43441   37.82839 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">lon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">crime</span><span class="op">$</span><span class="va">lon</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -95.20886 -95.25925 -95.38346 -95.14241 -95.38237 -95.34265 -95.48563</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] -95.61593 -95.59248 -95.36863</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span><span class="op">(</span><span class="va">lat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">crime</span><span class="op">$</span><span class="va">lat</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 29.64037 29.75696 29.67366 29.67616 29.78473 29.65078 29.73213 29.78146</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 29.74118 29.94894</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'crime' not found</span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      left    bottom     right       top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -95.63961  29.62494 -95.11874  29.96437 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'lon' not found</span>
 <span class="r-in"><span><span class="fu">make_bbox</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span>, f <span class="op">=</span> <span class="fl">.10</span><span class="op">)</span> <span class="co"># bigger box</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      left    bottom     right       top </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -95.66329  29.60952 -95.09506  29.97980 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'lon' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
